@@ -50,8 +50,7 @@ Follow these steps to clone the repository, open it in VS Code, and run `index.h
    ```sh
       cd PapadBell
 
-Open in Visual Studio Code
-code .
+Open in Visual Studio Code.
 Run index.html with Live Server.
 Make sure you have the Live Server extension installed in VS Code.
 Open index.html in VS Code.
