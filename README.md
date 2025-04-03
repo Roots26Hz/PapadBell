@@ -48,9 +48,7 @@ We love contributions! Follow these steps to collaborate:
 Have questions or suggestions? Reach out to us:  
 
 📧 **Email:**  
-📩 rutavdesai461@gmail.com  
-📩 ritviknambiar09@gmail.com  
-📩 arpitgupta.3106@gmail.com  
+📩 papadbellofficial@gmail.com
 
 Or, create an **issue** in this repository!  
 
