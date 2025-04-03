@@ -31,33 +31,6 @@ Backend: Node.js
 
 Version Control: GitHub
 
-
-
----
-
-🎯 Getting Started
-
-⿡ Clone the Repository
-
-git clone https://github.com/ArpitG420/PapadBell.git
-
-⿢ Navigate to the Project Directory
-
-cd papadbell
-
-⿣ Install Dependencies
-
-npm install
-
-⿤ Run the Development Server
-
-npm start
-
-Open http://localhost:3000 to view the project in your browser.
-
-
----
-
 📜 Contributing
 
 We welcome contributions! Feel free to fork this repo, make changes, and submit a pull request.
@@ -95,6 +68,10 @@ We welcome contributions! Feel free to fork this repo, make changes, and submit 
 
 📞 Contact Us
 
-For queries, reach out via ritviknambiar09@gmail.com or arpitgupta.3106@gmail.com or create an issue in this repository!
+For queries, reach out via 
+rutavdesai461@gmail.com,
+ritviknambiar09@gmail.com,
+arpitgupta.3106@gmail.com 
+or create an issue in this repository!
 
 Happy Coding & Happy Eating! 🍕🍔
