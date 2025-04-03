@@ -27,11 +27,7 @@ Smooth Animations & Transitions – A visually engaging experience.
 
 Frontend: HTML, CSS, JavaScript
 
-Backend: Node.js, Express.js
-
-Database: MongoDB
-
-Hosting: Vercel / Netlify (TBD)
+Backend: Node.js
 
 Version Control: GitHub
 
@@ -43,7 +39,7 @@ Version Control: GitHub
 
 ⿡ Clone the Repository
 
-git clone https://github.com/your-username/papadbell.git
+git clone https://github.com/ArpitG420/PapadBell.git
 
 ⿢ Navigate to the Project Directory
 
@@ -89,8 +85,6 @@ We welcome contributions! Feel free to fork this repo, make changes, and submit 
 
 [ ] Integrate user authentication
 
-[ ] Add real-time order tracking
-
 [ ] Implement a review and rating system
 
 [ ] Improve accessibility & performance
@@ -101,6 +95,6 @@ We welcome contributions! Feel free to fork this repo, make changes, and submit 
 
 📞 Contact Us
 
-For queries, reach out via your-email@example.com or create an issue in this repository!
+For queries, reach out via ritviknambiar09@gmail.com or arpitgupta.3106@gmail.com or create an issue in this repository!
 
 Happy Coding & Happy Eating! 🍕🍔
