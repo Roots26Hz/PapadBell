@@ -1,0 +1,174 @@
+.container1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    transition: 0.5s;
+    padding: 0 20px;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    align-items: center;
+}
+header h1 {
+    font-family: "Oswald", sans-serif;
+    color: #3f2842;
+    margin: 0;
+}
+header .shopping{
+    position: relative;
+    text-align: right;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+header .shopping img{
+    width: 80px;
+}
+header .shopping span{
+    background-color: #f463d4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+
+    padding: 3px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 10px;
+    height: 20px;
+}
+.list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+.card{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 450px;
+    background-color: #3f2842;
+    height: 100vh;
+    transition: 0.5s;
+    z-index: 1000;
+    overflow-y: auto;
+}
+.active .card{
+    left: calc(100% - 450px);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+.active .container1{
+    transform: translateX(-200px);
+}
+.card h1{
+    color: white;
+    font-weight: 100;
+    font-family:"Oswald",sans-serif;
+    margin: 0;
+    padding: 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #2e1c30;
+}
+.card .checkOut{
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.card .checkOut div{
+    background-color: #2e1c30;
+    font-family:"Oswald",sans-serif;
+    color: #fff;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.card .checkOut div:hover {
+    background-color: #f463d4;
+}
+.card .checkOut div:nth-child(2){
+    background-color: #3f2842;
+    font-family:"Oswald",sans-serif;
+    color: #fff;
+}
+.card .checkOut div:nth-child(2):hover {
+    background-color: #2e1c30;
+}
+
+.listCard {
+    padding: 0;
+    margin: 0;
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+}
+
+/* Scroll bar styling */
+.listCard::-webkit-scrollbar {
+    width: 8px;
+}
+
+.listCard::-webkit-scrollbar-track {
+    background: #2e1c30; 
+}
+ 
+.listCard::-webkit-scrollbar-thumb {
+    background: #f463d4; 
+    border-radius: 10px;
+}
+
+.listCard::-webkit-scrollbar-thumb:hover {
+    background: #e03ec1; 
+}
+
+/* Empty cart message */
+.empty-cart-message {
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-family: "Oswald", sans-serif;
+    opacity: 0.7;
+}
+
+/* Add to cart animation */
+@keyframes addToCart {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.add-animation {
+    animation: addToCart 0.3s ease;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+    .active .card {
+        left: 0;
+    }
+    .active .container1 {
+        transform: translateX(-100px);
+    }
+    .row {
+        justify-content: center;
+    }
+}

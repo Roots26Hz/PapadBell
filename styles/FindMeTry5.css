@@ -1,0 +1,88 @@
+#findmenu
+{
+    text-align: center;
+    color:white;
+    font-size: 200%;
+    font-weight: bold;
+    background-color: transparent;
+    padding:5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    border-radius: 35px;
+    margin-left: 25%;
+    width: 37%;
+}
+.dropdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin-bottom: 3%;
+}
+
+select {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    padding: 2.5%;
+    border-radius: 20px;
+    border: none;
+    background-color: #80447e;
+    color: lightgrey;
+    font-size: 90%;
+    cursor: pointer;
+}
+
+.buttonnn {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    padding: 2.5%;
+    border-radius: 20px;
+    border: none;
+    background-color: #80447e;
+    color: lightgrey;
+    font-size: 90%;
+    cursor: pointer;
+    background-color: #f70ad3;
+}
+
+button:hover {
+    background-color: #d50ab3;
+}
+
+.store-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.store-card{
+    background-color:#3f2842;
+    border-radius: 15px;
+    top: auto;
+    border-color: white;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+    padding-bottom:10px;
+    width: 350px;
+    height: 480px;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.25, 1.25, 0.5, 1), box-shadow 0.4s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.store-card:hover{
+    box-shadow: 0px 5px 25px #bcbcbc;
+    background-color: black;
+    transform: scale(1.15);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+}
+.store-card img {
+    width: 325px;
+    height:400px;
+    border-radius: 10px;
+    padding-bottom:10px;
+}

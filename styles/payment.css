@@ -1,0 +1,156 @@
+body {
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 70px;
+    gap: 250px;
+    margin-bottom: 300px;
+}
+
+/* Shopping Cart Section */
+
+#st {
+    font-size: 8.5vw;
+    text-align: center;
+    background: -webkit-linear-gradient(#ffffff, #ed26c3);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: rgba(63, 40, 66, 0.8);
+    border-radius: 10px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ed26c3;
+    color: white;
+}
+
+.cart-table th {
+    background-color: #ed26c3;
+    color: white;
+    font-weight: bold;
+}
+
+.cart-table tfoot td {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Payment Section */
+/* General Layout */
+.payment-section {
+    width: 60%;
+    margin: auto;
+    padding: 30px;
+    background: rgba(40, 40, 60, 0.95);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+#st {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Payment Options */
+.payment-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 90px;
+}
+
+.payment-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ed26c3, #9b1b8a);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    transition: 0.3s;
+}
+
+.payment-label input {
+    transform: scale(1.2);
+}
+
+/* Hover effect */
+.payment-label:hover {
+    background: linear-gradient(45deg, #9b1b8a, #ed26c3);
+}
+
+/* Payment Details */
+.payment-details {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.payment-details label {
+    color: white;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.payment-details input {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ed26c3;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Pay Button */
+.pay-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #ed26c3, #ff69b4);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+
+.pay-button:hover {
+    background: linear-gradient(90deg, #ff69b4, #ed26c3);
+}
+
+/* Payment Message */
+#payment-message {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+

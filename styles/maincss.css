@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mainbody{
+    margin-top: 200px;
+    margin-bottom: 150px;
+}
+body{
+    min-height: 100vh;
+    font-family: "Oswald",sans-serif;
+}
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1525px;
+    margin: auto;
+    overflow: hidden;
+    top: 15px;
+}
+.background-image {
+    width: 100%;
+    display: block;
+    opacity: 0.3;
+}
+
+nav{
+    background-color: rgb(63, 40, 66);
+    position: sticky;
+    z-index: 3;
+    border-style: inherit;
+    padding: 10px 20px;
+    top: 0;
+    
+    
+    
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    color:rgb(237, 38, 195);
+}
+nav a {
+    display: flex;
+    height: 70px;
+    padding: 30px 45px;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    color: #ed26c3;
+    transition:  box-shadow 0.8s ,background-color 0.8s ease, color 0.2s;
+}
+nav a:hover{
+    color: #f463d4;
+    background-color: #4f3353;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+nav a:active{
+    color: yellow;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); 
+    
+}
+.video-overlay{
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+    margin: auto;
+}
+.side-bar{
+    position: fixed;
+    padding: 0;
+    top: 0;
+    right: 0;
+    height: 860px;
+    width: 180px;
+    z-index: 999;
+    background-color: rgba(255, 255,255,0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.side-bar li{
+    width: 70px;
+}
+.side-bar a{
+    width: 75px;
+    height: 25px;
+}
+.sider-bar a:hover{
+    color: #f463d4;
+    background-color: black;
+}
+@media(max-width: 800px){
+    .hide{
+        display: none;
+    }
+}
+@media(max-width: 400px){
+    .side-bar{
+        width: 100%;
+    }
+}
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+}

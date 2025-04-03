@@ -1,0 +1,283 @@
+.body2{
+    margin-top: 750px;
+    margin-bottom: 150px;
+}
+
+.buttondesign{
+    background-color:#3f2842;
+    border-radius: 15px;
+    margin:auto;
+    top: auto;
+    border-color: transparent;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 420px;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.25, 1.25, 0.5, 1), box-shadow 0.4s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.buttondesign2{
+    border-radius: 15px;
+    margin:auto;
+    top: auto;
+    border-color: transparent;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100px;
+    align-items: center;
+    cursor: pointer;
+    color: transparent;
+    background-color: transparent;
+}
+
+.productname{
+    color:#f463d4;
+    font-family: "Oswald",sans-serif;
+    font-size: 15.5px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600 !important;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.photo{
+    margin-top: 3.5px;
+    border-radius: 7px;
+    width: 283px;
+    height: 300px;
+    object-fit: cover;
+}
+.photo-container{
+    position: relative;
+    display: inline-block;
+    width: 283px; /* Same width as the image */
+    height: 300px; /* Same height as the image */
+    border-radius: 7px;
+    overflow: hidden; /* Ensures the vignette effect stays inside the container */
+}
+.photo-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1.5) 100%);
+    pointer-events: none; /* Ensures the vignette does not interfere with interactions */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+.photo-container:hover::after {
+    opacity: 1; /* Makes the vignette visible on hover */
+}
+.buttondesign:hover{
+    box-shadow: 0px 5px 25px #bcbcbc;
+    background-color: black;
+    transform: scale(1.15);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+    
+}
+.buttondesign:active{
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    
+}
+.productname:hover{
+    text-decoration: underline;
+    color:yellow;
+}
+.nonveg{
+    color:#d53340;
+    font-family: "Oswald",sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+.veg{
+    color:#4e9914;
+    font-family: "Oswald",sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.price {
+    color: #fff;
+    font-family: "Oswald",sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left:20px;
+    padding-right: 20px;
+}
+.empty{
+    background-color:transparent;
+    border-radius: 15px;
+    margin:auto;
+    top: auto;
+    border-color: transparent;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.25, 1.25, 0.5, 1), box-shadow 0.4s ease;
+}
+.spandesign{
+    box-sizing: border-box;
+    padding: 12px;
+    background-color:#3f2842;
+    border-radius: 50px;
+    border-color: transparent;
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    height: 100px;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.25, 1.25, 0.5, 1), box-shadow 0.4s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.spandesign:hover{
+    box-shadow: 0px 5px 25px #bcbcbc;
+    background-color: black;
+    transform: scale(1.15);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+    
+}
+.emptyspan{
+    display: flex;
+    border-color: transparent;
+    box-sizing: border-box;
+    padding: 12px;
+    background-color: transparent;
+    border-radius: 50px;
+    border-color: transparent;
+    display: flex;
+    width: 240px;
+    height: 100px;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Cart styles for product items */
+.listCard li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #3f2842;
+    color: #fff;
+}
+
+.listCard .item-info {
+    display: flex;
+    align-items: center;
+}
+
+.listCard .item-info img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.listCard .item-name {
+    font-family: "Oswald", sans-serif;
+    font-size: 14px;
+}
+
+.listCard .item-type {
+    margin-left: 5px;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.listCard .veg-tag {
+    background-color: #4e9914;
+}
+
+.listCard .non-veg-tag {
+    background-color: #d53340;
+}
+
+.listCard .item-controls {
+    display: flex;
+    align-items: center;
+}
+
+.listCard .item-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.listCard .item-quantity button {
+    width: 25px;
+    height: 25px;
+    background-color: #3f2842;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.listCard .item-quantity button:hover {
+    background-color: #f463d4;
+}
+
+.listCard .item-quantity span {
+    padding: 0 5px;
+}
+
+.listCard .item-price {
+    font-family: "Oswald", sans-serif;
+    min-width: 60px;
+    text-align: right;
+}
+
+.remove-item {
+    background-color: #d53340;
+    color: white;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.remove-item:hover {
+    background-color: #ff0000;
+}
