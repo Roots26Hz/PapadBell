@@ -68,10 +68,10 @@ We welcome contributions! Feel free to fork this repo, make changes, and submit 
 
 📞 Contact Us
 
-For queries, reach out via \n
-rutavdesai461@gmail.com,\n
-ritviknambiar09@gmail.com,\n
-arpitgupta.3106@gmail.com \n
+For queries, reach out via
+rutavdesai461@gmail.com,
+ritviknambiar09@gmail.com,
+arpitgupta.3106@gmail.com
 or create an issue in this repository!
 
 Happy Coding & Happy Eating! 🍕🍔
