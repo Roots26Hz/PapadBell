@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Big Saving Combos!
+        </title>
+        <link rel="stylesheet" href="styles/menu.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Oswald:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/maincss.css">
+        <script src="scripted.js"></script>
+        <link rel="stylesheet" href="styles/Footer.css">
+        <link rel="icon" type="x-icon" href="Images/pixelcut-export.png">
+        <link rel="stylesheet" href="styles/shopstyle.css">
+        <link  rel="stylesheet" href="styles/maintext.css">
+    </head>
+    <body background="Images/Bgimage2.png">
+        <nav id="navbar">
+            <ul>
+                <li onclick="playMusic()">
+                    <a href="index.html">
+                        <img src="Images/pixelcut-export.png" width="135">
+                        <audio src="Images/taco-bell-bong-sfx.mp3" autoplay muted></audio>
+                    </a>
+                </li>
+                <li class="hide"><a href="index.html#head">ORDER NOW</a></li>
+                <li class="hide"><a href="FindMeTry5.html">FIND US</a></li>
+                <li class="hide"><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+                <li class="hide"><a href="aboutus.html">ABOUT US </a></li>
+                <li class="hide"><a href="login.html" id="loginButton">SIGN IN/UP</a></li>
+                <li class="hide">
+                    <header><div class="shopping">
+                    <img src="Images/shopping.svg">
+                    <span class="quantity">0</span>
+                    </div></header>
+                </li>
+                    
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ed26c2"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="side-bar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="60px" fill="#ed26c2"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html#head">ORDER NOW</a></li>
+                <li><a href="FindMeTry5.html">FIND US</a></li>
+                <li><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+                <li><a href="AboutUs.html">ABOUT US </a></li>
+                <li><a href="login.html" id="sideLoginButton">SIGN IN/UP</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <video autoplay loop muted  class="video-overlay">
+                <source src="Images/combo/Taco Tuesday ｜ Featuring LeBron & Jason [clD_dG0ZFug].mkv" type="video/mp4">
+            </video>
+            <p id="head" style=" top: 650px;">COMBOS!</p>
+            <div class="body2">
+                <section class="row">
+                    <button class="buttondesign" data-id="combo-veg-tacos-chalupa" data-name="2 CRUNCHY PAPAD + 2 PANEER MAKHNI CHALUPA + CHEESY FRIES" data-price="280" data-type="veg" data-image="images/combo/1.jpg">
+                        <div class="photo-container">
+                        <img class="photo" src="images/combo/1.jpg">
+                        </div>
+                        <p class="productname">2 CRUNCHY PAPAD + 2 PANEER MAKHNI CHALUPA + CHEESY FRIES</p>
+                        <p class="veg">veg</p>
+                        <p class="price">₹280</p>
+                    </button>
+                    <button class="buttondesign" data-id="combo-nonveg-tacos-chalupa" data-name="2 CRUNCHY PAPAD + 2 BUTTER CHICKEN CHALUPA + CHEESY FRIES" data-price="320" data-type="non-veg" data-image="images/combo/2.jpg">
+                        <div class="photo-container">
+                        <img class="photo" src="images/combo/2.jpg">
+                        </div>
+                        <p class="productname">2 CRUNCHY PAPAD + 2 BUTTER CHICKEN CHALUPA + CHEESY FRIES</p>
+                        <p class="nonveg">non-veg</p>
+                        <p class="price">₹320</p>
+                    </button>
+                    <button class="buttondesign" data-id="big-bell-box-veg" data-name="BIG BELL BOX" data-price="300" data-type="veg" data-image="images/combo/3.jpg">
+                        <div class="photo-container">
+                        <img class="photo" src="images/combo/3.jpg">
+                        </div>
+                        <p class="productname">BIG BELL BOX</p>
+                        <p class="veg">veg</p>
+                        <p class="price">₹300</p>
+                    </button>
+                    <button class="buttondesign" data-id="big-bell-box-nonveg" data-name="BIG BELL BOX" data-price="300" data-type="non-veg" data-image="images/combo/4.jpg">
+                        <div class="photo-container">
+                        <img class="photo" src="images/combo/4.jpg">
+                        </div>
+                        <p class="productname">BIG BELL BOX</p>
+                        <p class="nonveg">non-veg</p>
+                        <p class="price">₹300</p>
+                    </button>
+                </section>
+                <br><br>
+                <section class="row">
+                    <button class="buttondesign" data-id="naked-chicken-tacos-combo" data-name="2 NAKED CHICKEN PAPAD + 1 SEASONED NACHOS & SALSA + 1 CHURRO BOMBS" data-price="320" data-type="non-veg" data-image="images/combo/5.jpg">
+                        <div class="photo-container">
+                        <img class="photo" src="images/combo/5.jpg">
+                        </div>
+                        <p class="productname">2 NAKED CHICKEN PAPAD + 1 SEASONED NACHOS & SALSA + 1 CHURRO BOMBS</p>
+                        <p class="nonveg">Non-veg</p>
+                        <p class="price">₹320</p>
+                    </button>
+                    <button class="buttondesign" data-id="veg-burrito-combo" data-name="4 VEG 7 LAYER BURRITO VEG + 2 SEASONED FRIES + 2 CHURRO BOMBS" data-price="280" data-type="veg" data-image="images/combo/6.jpg">
+                        <div class="photo-container">
+                        <img class="photo" src="images/combo/6.jpg">
+                        </div>
+                        <p class="productname">4 VEG 7 LAYER BURRITO VEG + 2 SEASONED FRIES + 2 CHURRO BOMBS</p>
+                        <p class="veg">veg</p>
+                        <p class="price">₹280</p>
+                    </button>
+                    <button class="buttondesign" data-id="chicken-burrito-combo" data-name="4 CHICKEN 7 LAYER BURRITO VEG + 2 SEASONED FRIES + 2 CHURRO BOMBS" data-price="320" data-type="non-veg" data-image="images/combo/7.jpg">
+                        <div class="photo-container">
+                        <img class="photo" src="images/combo/7.jpg">
+                        </div>
+                        <p class="productname">4 CHICKEN 7 LAYER BURRITO VEG + 2 SEASONED FRIES + 2 CHURRO BOMBS</p>
+                        <p class="nonveg">non-veg</p>
+                        <p class="price">₹320</p>
+                    </button>
+                    <button class="empty">
+                    </button>
+                </section>
+            </div>
+        </div>
+        <div class="card">
+            <h1>Your Cart</h1>
+            <ul class="listCard">
+            </ul>
+            <div class="checkOut">
+                <div class="total">₹0.00</div>
+                <div class="closeShopping">Close</div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="section squircle">
+                    <img src="Images/mainimages/Offer.png" width="70" style="align-items: center;"><br><br>
+                    <h2 class="section-title">SPECIAL OFFERS</h2>
+                    <p class="section-text">Don't miss out on exclusive offers.</p>
+                    <a href="everyday-value.html" class="section-link">Special Offers <span>&#8594;</span></a>
+                </div>
+    
+                <div class="section squircle">
+                    <img src="Images/mainimages/bellll.png" width="90">
+                    <h2 class="section-title">FIND PAPAD BELL</h2>
+                    <p class="section-text">Find the nearest Papad Bell Restaurant in your city.</p>
+                    <a href="FindMeTry5.html" class="section-link">Find Us <span>&#8594;</span></a>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <div class="footer-logo" >
+                    <img src="Images/favicon.ico.png" alt="Papad Bell Logo">
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">aaj toh ek combo leke rahunga 😤</a></li>
+                </ul>
+                <p class="footer-copyright">&copy;2025 Papad Bell IP Holder, LLC. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </body>
+    <script src="user-session-manager.js"></script>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/maincss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="x-icon" href="Images/pixelcut-export.png">
+    <link rel="stylesheet" href="styles/Footer.css">
+    <link  rel="stylesheet" href="styles/maintext.css">
+    <link  rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/shopstyle.css">
+    <!-- Add Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+
+    <title>About Us</title>
+    <style>
+        #mainbody {
+            font-family: "Oswald", sans-serif;
+            background-color: rgb(88, 54, 93);
+            text-align: center;
+        }
+        .bigcontainer {
+            padding: 80px 0;
+        }
+        #top{
+            font-family: "Oswald", sans-serif;
+            font-weight: bold;
+            font-size: 6vw; 
+            text-align: center;
+            background: -webkit-linear-gradient(#ffffff, #ed26c3);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative; 
+            top: 50px;
+            left: 33%;
+            transform: translateX(-50%);
+            width: 65%;
+            margin: auto;
+        }
+        .insidebigcontainer {
+            display: flex;
+            justify-content: center;
+            gap: 150px;
+        }
+        .cardshit {
+            background-color: #68436d;
+            border-radius: 50px;
+            padding: 30px;
+            width: 270px;
+            text-align: center;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        .cardshit img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        #name {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #f8f6f7;
+        }
+        #roll {
+            font-size: 23px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        /* Social Media Button Styles */
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .social-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            color: #68436d;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .social-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .github {
+            background-color: #333;
+            color: white;
+        }
+        .linkedin {
+            background-color: #0077B5;
+            color: white;
+        }
+        .instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+        .twitter {
+            background-color: #000000;
+            color: white;
+        }
+    </style>
+</head>
+<body id="mainbody" background="Images/Bgimage2.png">
+    <nav id="navbar">
+        <ul>
+            <li onclick="playMusic()">
+                <a href="index.html">
+                    <img src="Images/pixelcut-export.png" width="135">
+                    <audio src="Images/taco-bell-bong-sfx.mp3" autoplay muted></audio>
+                </a>
+            </li>
+            <li class="hide"><a href="index.html#head">ORDER NOW</a></li>
+            <li class="hide"><a href="FindMeTry5.html">FIND US</a></li>
+            <li class="hide"><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+            <li class="hide"><a href="aboutus.html">ABOUT US </a></li>
+            <li class="hide"><a href="login.html" id="loginButton">SIGN IN/UP</a></li>
+            <li class="hide">
+                <header><div class="shopping">
+                <img src="Images/shopping.svg">
+                <span class="quantity">0</span>
+                </div></header>
+            </li>
+                
+            <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ed26c2"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+        <ul class="side-bar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="60px" fill="#ed26c2"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html#head">ORDER NOW</a></li>
+            <li><a href="FindMeTry5.html">FIND US</a></li>
+            <li><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+            <li><a href="AboutUs.html">ABOUT US </a></li>
+            <li><a href="login.html" id="sideLoginButton">SIGN IN/UP</a></li>
+        </ul>
+    </nav>
+    <div class="card">
+        <h1>Your Cart</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">₹0.00</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+    <div class="bigcontainer">
+        <h1 id="top">Meet Our Team</h1><br><br><br><br><br>
+        <div class="insidebigcontainer">
+            <div class="cardshit">
+                <img src="Images/Ritvik.jpg" alt="Member 1">
+                <h2 id="name">Ritvik Nambiar</h2>
+                <p id="roll">CB.SC.U4CSE24645</p>
+                <div class="social-buttons">
+                    <a href="https://github.com/vector4653" target="_blank" class="social-button github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ritvik_nambiar?igsh=MXBna2gxNG9xd3BzeA==" target="_blank" class="social-button instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/Ritvik_09?t=k5RmF0Qvc4DXaLTL9oXMpA&s=09" target="_blank" class="social-button twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                        </svg>                      
+                    </a>
+                </div>
+            </div>
+            <div class="cardshit">
+                <img src="Images/Arpit.jpg" alt="Member 2">
+                <h2 id="name">Arpit Gupta</h2>
+                <p id="roll">CB.SC.U4CSE24606</p>
+                <div class="social-buttons">
+                    <a href="https://github.com/ArpitG420" target="_blank" class="social-button github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/arpitgupta_3106" target="_blank" class="social-button instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/ArpitG420" target="_blank" class="social-button twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                        </svg>                      
+                    </a>
+                </div>
+            </div>
+            <div class="cardshit">
+                <img src="Images/Rutav.jpg" alt="Member 3">
+                <h2 id="name">Rutav Desai</h2>
+                <p id="roll">CB.SC.U4CSE24664</p>
+                <div class="social-buttons">
+                    <a href="https://github.com/Roots26Hz" target="_blank" class="social-button github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/rutavdesai_26_" target="_blank" class="social-button instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/rutav_desai" target="_blank" class="social-button twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                        </svg>                  
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="section squircle">
+                <img src="Images/mainimages/Offer.png" width="70" style="align-items: center;"><br><br>
+                <h2 class="section-title">SPECIAL OFFERS</h2>
+                <p class="section-text">Don't miss out on exclusive offers.</p>
+                <a href="everyday-value.html" class="section-link">Special Offers <span>&#8594;</span></a>
+            </div>
+
+            <div class="section squircle">
+                <img src="Images/mainimages/bellll.png" width="90">
+                <h2 class="section-title">FIND PAPAD BELL</h2>
+                <p class="section-text">Find the nearest Papad Bell Restaurant in your city.</p>
+                <a href="FindMeTry5.html" class="section-link">Find Us <span>&#8594;</span></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-logo" >
+                <img src="Images/favicon.ico.png" alt="Papad Bell Logo">
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">YAHA KE LIYE LINE CHAHIYE</a></li>
+            </ul>
+            <p class="footer-copyright">&copy;2025 Papad Bell IP Holder, LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+<script src="app.js"></script>
+<script src="user-session-manager.js"></script>
+</html>

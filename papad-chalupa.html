@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Every Day Best Value! 
+        </title>
+        <link rel="stylesheet" href="styles/menu.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Oswald:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/maincss.css">
+        <link rel="stylesheet" href="styles/Footer.css">
+        <link rel="stylesheet" href="styles/shopstyle.css">
+        <link rel="icon" type="x-icon" href="Images/pixelcut-export.png">
+        <link  rel="stylesheet" href="styles/maintext.css">
+    </head>
+    <body background="Images/Bgimage2.png">
+        <nav id="navbar">
+            <ul>
+                <li onclick="playMusic()">
+                    <a href="index.html">
+                        <img src="Images/pixelcut-export.png" width="135">
+                        <audio src="Images/taco-bell-bong-sfx.mp3" autoplay muted></audio>
+                    </a>
+                </li>
+                <li class="hide"><a href="index.html#head">ORDER NOW</a></li>
+                <li class="hide"><a href="FindMeTry5.html">FIND US</a></li>
+                <li class="hide"><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+                <li class="hide"><a href="aboutus.html">ABOUT US </a></li>
+                <li class="hide"><a href="login.html" id="loginButton">SIGN IN/UP</a></li>
+                <li class="hide">
+                    <header><div class="shopping">
+                    <img src="Images/shopping.svg">
+                    <span class="quantity">0</span>
+                    </div></header>
+                </li>
+                    
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ed26c2"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="side-bar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="60px" fill="#ed26c2"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html#head">ORDER NOW</a></li>
+                <li><a href="FindMeTry5.html">FIND US</a></li>
+                <li><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+                <li><a href="AboutUs.html">ABOUT US </a></li>
+                <li><a href="login.html" id="sideLoginButton">SIGN IN/UP</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <video autoplay loop muted  class="video-overlay">
+                <source src="Images/papad-chalupa/Elizabeth Hinkler - Taco Bell Commercial [MXXrzkPreFo].mkv" type="video/mp4">
+            </video>
+            <p id="head" style=" top: 650px;">PAPAD & CHALUPA</p>
+            <div class="body2">
+            <section class="row">
+                <button class="buttondesign" data-id="1" data-name="CHEESY LAVA TACO" data-price="150" data-image="images/papad-chalupa/1.png" data-type="non-veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\1.png">
+                    </div>
+                    <p class="productname">CHEESY LAVA TACO</p>
+                    <p class="nonveg">Non-veg</p>
+                    <p class="price">₹150</p>
+                </button>
+                <button class="buttondesign" data-id="2" data-name="CHEESY LAVA TACO VEG" data-price="120" data-image="images/papad-chalupa/2.png" data-type="veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\2.png">
+                    </div>
+                    <p class="productname">CHEESY LAVA TACO</p>
+                    <p class="veg">veg</p>
+                    <p class="price">₹120</p>
+                </button>
+                <button class="buttondesign" data-id="3" data-name="CHICKEN SHEEEK TACO MEAL" data-price="220" data-image="images/papad-chalupa/3.jpg" data-type="non-veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\3.jpg">
+                    </div>
+                    <p class="productname">CHICKEN SHEEEK TACO MEAL</p>
+                    <p class="nonveg">Non-veg</p>
+                    <p class="price">₹220</p>
+                </button>
+                <button class="buttondesign" data-id="4" data-name="CHICKEN SHEEEK TACO" data-price="150" data-image="images/papad-chalupa/4.jpg" data-type="non-veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\4.jpg">
+                    </div>
+                    <p class="productname">CHICKEN SHEEEK TACO</p>
+                    <p class="nonveg">Non-veg</p>
+                    <p class="price">₹150</p>
+                </button>
+            </section>
+            <br><br>
+            <section class="row">
+                <button class="buttondesign" data-id="5" data-name="CRISPY CHALUPA TACO MEXICAN PANEER" data-price="180" data-image="images/papad-chalupa/5.jpg" data-type="veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\5.jpg">
+                    </div>
+                    <p class="productname">CRISPY CHALUPA TACO MEXICAN PANEER</p>
+                    <p class="veg">veg</p>
+                    <p class="price">₹180</p>
+                </button>
+                <button class="buttondesign" data-id="6" data-name="BUTTER CHICKEN TACO MEAL" data-price="220" data-image="images/papad-chalupa/6.jpg" data-type="non-veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\6.jpg">
+                    </div>
+                    <p class="productname">BUTTER CHICKEN TACO MEAL</p>
+                    <p class="nonveg">Non-veg</p>
+                    <p class="price">₹220</p>
+                </button>
+                <button class="buttondesign" data-id="7" data-name="BUTTER CHICKEN TACO" data-price="150" data-image="images/papad-chalupa/7.jpg" data-type="non-veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\7.jpg">
+                    </div>
+                    <p class="productname">BUTTER CHICKEN TACO</p>
+                    <p class="nonveg">Non-veg</p>
+                    <p class="price">₹150</p>
+                </button>
+                <button class="buttondesign" data-id="8" data-name="PANEER MAKHNI TACO MEAL" data-price="220" data-image="images/papad-chalupa/8.jpg" data-type="veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\8.jpg">
+                    </div>
+                    <p class="productname">PANEER MAKHNI TACO MEAL</p>
+                    <p class="veg">veg</p>
+                    <p class="price">₹220</p>
+                </button>
+            </section>
+            <br><br>
+            <section class="row">
+                <button class="buttondesign" data-id="9" data-name="PANEER MAKHNI TACO" data-price="120" data-image="images/papad-chalupa/9.jpg" data-type="veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\9.jpg">
+                    </div>
+                    <p class="productname">PANEER MAKHNI TACO</p>
+                    <p class="veg">veg</p>
+                    <p class="price">₹120</p>
+                </button>
+                <button class="buttondesign" data-id="10" data-name="CRISPY CHALUPA TACO MEAL" data-price="220" data-image="images/papad-chalupa/10.jpg" data-type="veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\10.jpg">
+                    </div>
+                    <p class="productname">CRISPY CHALUPA TACO MEAL</p>
+                    <p class="veg">veg</p>
+                    <p class="price">₹220</p>
+                </button>
+                <button class="buttondesign" data-id="11" data-name="SOFT TACO MEXICAN PANEER" data-price="120" data-image="images/papad-chalupa/11.jpg" data-type="veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\11.jpg">
+                    </div>
+                    <p class="productname">SOFT TACO MEXICAN PANEER</p>
+                    <p class="veg">veg</p>
+                    <p class="price">₹120</p>
+                </button>
+                <button class="buttondesign" data-id="12" data-name="NAKED CHICKEN TACO MEAL" data-price="220" data-image="images/papad-chalupa/11.jpg" data-type="veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\11.jpg">
+                    </div>
+                    <p class="productname">NAKED CHICKEN TACO MEAL</p>
+                    <p class="veg">veg</p>
+                    <p class="price">₹220</p>
+                </button>
+            </section>
+            <br><br>
+            <section class="row">
+                <button class="buttondesign" data-id="13" data-name="CRISPY CHALUPA TACO" data-price="180" data-image="images/papad-chalupa/12.jpg" data-type="non-veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\12.jpg">
+                    </div>
+                    <p class="productname">CRISPY CHALUPA TACO</p>
+                    <p class="nonveg">Non-veg</p>
+                    <p class="price">₹180</p>
+                </button>
+                <button class="buttondesign" data-id="14" data-name="TWO TACO MEAL VEG" data-price="300" data-image="images/papad-chalupa/14.jpg" data-type="veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\14.jpg">
+                    </div>
+                    <p class="productname">TWO TACO MEAL</p>
+                    <p class="veg">veg</p>
+                    <p class="price">₹300</p>
+                </button>
+                <button class="buttondesign" data-id="15" data-name="TWO TACO MEAL NON-VEG" data-price="320" data-image="images/papad-chalupa/15.jpg" data-type="non-veg">
+                    <div class="photo-container">
+                    <img class="photo" src="images\papad-chalupa\15.jpg">
+                    </div>
+                    <p class="productname">TWO TACO MEAL</p>
+                    <p class="nonveg">Non-veg</p>
+                    <p class="price">₹320</p>
+                </button>
+                <button class="empty">
+                </button>
+            </section>
+        </div>
+    </div>
+
+        <div class="card">
+            <h1>Your Cart</h1>
+            <ul class="listCard">
+            </ul>
+            <div class="checkOut">
+                <div class="total">₹0.00</div>
+                <div class="closeShopping">Close</div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="section squircle">
+                    <img src="Images/mainimages/Offer.png" width="70" style="align-items: center;"><br><br>
+                    <h2 class="section-title">SPECIAL OFFERS</h2>
+                    <p class="section-text">Don't miss out on exclusive offers.</p>
+                    <a href="everyday-value.html" class="section-link">Special Offers <span>&#8594;</span></a>
+                </div>
+    
+                <div class="section squircle">
+                    <img src="Images/mainimages/bellll.png" width="90">
+                    <h2 class="section-title">FIND PAPAD BELL</h2>
+                    <p class="section-text">Find the nearest Papad Bell Restaurant in your city.</p>
+                    <a href="FindMeTry5.html" class="section-link">Find Us <span>&#8594;</span></a>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <div class="footer-logo" >
+                    <img src="Images/favicon.ico.png" alt="Papad Bell Logo">
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">Papad ho ya chalupa, dono ka crunch dil kare ‘muaaah’!</a></li>
+                </ul>
+                <p class="footer-copyright">&copy;2025 Papad Bell IP Holder, LLC. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script src="app.js"></script>
+    </body>
+    <script src="user-session-manager.js"></script>
+</html>

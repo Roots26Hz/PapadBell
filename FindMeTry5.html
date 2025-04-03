@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Find a Store</title>
+    <script src="FindMeTry5.js"></script>
+    <link rel="stylesheet" href="styles/FindMeTry5.css">
+    <link rel="stylesheet" href="styles/maincss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="x-icon" href="Images/pixelcut-export.png">
+    <link rel="stylesheet" href="styles/Footer.css">
+    <link  rel="stylesheet" href="styles/maintext.css">
+    <link  rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/shopstyle.css">
+    <script src="FindMeTry5.js"></script>
+    <link rel="stylesheet" href="styles/FindMeTry5.css">
+<body background="Images/Bgimage2.png">
+    <nav id="navbar">
+        <ul>
+            <li onclick="playMusic()">
+                <a href="index.html">
+                    <img src="Images/pixelcut-export.png" width="135">
+                    <audio src="Images/taco-bell-bong-sfx.mp3" autoplay muted></audio>
+                </a>
+            </li>
+            <li class="hide"><a href="index.html#head">ORDER NOW</a></li>
+            <li class="hide"><a href="FindMeTry5.html">FIND US</a></li>
+            <li class="hide"><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+            <li class="hide"><a href="aboutus.html">ABOUT US </a></li>
+            <li class="hide"><a href="login.html" id="loginButton">SIGN IN/UP</a></li>
+            <li class="hide">
+                <header><div class="shopping">
+                <img src="Images/shopping.svg">
+                <span class="quantity">0</span>
+                </div></header>
+            </li>
+                
+            <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ed26c2"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+        <ul class="side-bar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="60px" fill="#ed26c2"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html#head">ORDER NOW</a></li>
+            <li><a href="FindMeTry5.html">FIND US</a></li>
+            <li><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+            <li><a href="AboutUs.html">ABOUT US </a></li>
+            <li><a href="login.html" id="sideLoginButton">SIGN IN/UP</a></li>
+        </ul>
+    </nav>
+    <div id="findmenu2" style="background-color: transparent;">
+        <h2 style="text-align: center;color:white; padding: 2%;">Find a Store</h2><br>
+        <div class="dropdown-container">
+            <select id="state" onchange="updateCities()">
+                <option value="">Select State</option>
+            </select>
+            <select id="city" onchange="updateLocalities()" disabled>
+                <option value="">Select City</option>
+            </select>
+            <select id="locality" disabled>
+                <option value="">Select Locality</option>
+            </select>
+            <button onclick="searchStores()" style="padding-left: 18px;padding-right: 18px;" class="buttonnn">Search</button>
+        </div>
+    </div>
+    <br><br>
+    <div class="store-results" id="results"><script src="FindMeTry5.js"></script></div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="section squircle">
+                <img src="Images/mainimages/Offer.png" width="70" style="align-items: center;"><br><br>
+                <h2 class="section-title">SPECIAL OFFERS</h2>
+                <p class="section-text">Don't miss out on exclusive offers.</p>
+                <a href="everyday-value.html" class="section-link">Special Offers <span>&#8594;</span></a>
+            </div>
+
+            <div class="section squircle">
+                <img src="Images/mainimages/bellll.png" width="90">
+                <h2 class="section-title">FIND PAPAD BELL</h2>
+                <p class="section-text">Find the nearest Papad Bell Restaurant in your city.</p>
+                <a href="#navbar" class="section-link">Find Us <span>&#8594;</span></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-logo" >
+                <img src="Images/favicon.ico.png" alt="Papad Bell Logo">
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">Dhond liya kya humko 😉?</a></li>
+            </ul>
+            <p class="footer-copyright">&copy;2025 Papad Bell IP Holder, LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+<script src="user-session-manager.js"></script>
+</html>

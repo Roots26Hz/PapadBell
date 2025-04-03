@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Payment Page</title>
+        <link rel="stylesheet" href="styles/menu.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Oswald:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/maincss.css">
+        <link rel="stylesheet" href="styles/Footer.css">
+        <link rel="icon" type="x-icon" href="Images/pixelcut-export.png">
+        <link rel="stylesheet" href="styles/shopstyle.css">
+        <link rel="stylesheet" href="styles/payment.css">
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    </head>
+    <body background="Images/Bgimage2.png">
+        <nav id="navbar">
+            <ul>
+                <li onclick="playMusic()">
+                    <a href="index.html">
+                        <img src="Images/pixelcut-export.png" width="135">
+                        <audio src="Images/taco-bell-bong-sfx.mp3" autoplay muted></audio>
+                    </a>
+                </li>
+                <li class="hide"><a href="index.html#head">ORDER NOW</a></li>
+                <li class="hide"><a href="FindMeTry5.html">FIND US</a></li>
+                <li class="hide"><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+                <li class="hide"><a href="aboutus.html">ABOUT US </a></li>
+                <li class="hide"><a href="login.html" id="loginButton">SIGN IN/UP</a></li>
+                <li class="hide">
+                    <header><div class="shopping">
+                    <img src="Images/shopping.svg">
+                    <span class="quantity">0</span>
+                    </div></header>
+                </li>
+                    
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ed26c2"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="side-bar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="60px" fill="#ed26c2"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html#head">ORDER NOW</a></li>
+                <li><a href="FindMeTry5.html">FIND US</a></li>
+                <li><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+                <li><a href="AboutUs.html">ABOUT US </a></li>
+                <li><a href="login.html" id="sideLoginButton">SIGN IN/UP</a></li>
+            </ul>
+        </nav>
+        <div class="card">
+            <h1>Your Cart</h1>
+            <ul class="listCard">
+            </ul>
+            <div class="checkOut">
+                <div class="total">$0.00</div>
+                <div class="closeShopping">Close</div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Shopping Cart Section -->
+            <div class="cart-section">
+                <p id="st">Shopping Cart</p>
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items"> <!-- Dynamic cart items will be inserted here --> </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"><strong>Total:</strong></td>
+                            <td id="total-price">₹0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="payment-section">
+                <h2 id="st">Select Payment Method</h2>
+                <form id="payment-form">
+                    <div class="payment-options">
+                        <label class="payment-label">
+                            <input type="radio" name="payment" value="UPI"> 
+                            <span>UPI</span>
+                        </label>
+                        <label class="payment-label">
+                            <input type="radio" name="payment" value="Net Banking"> 
+                            <span>Net Banking</span>
+                        </label>
+                        <label class="payment-label">
+                            <input type="radio" name="payment" value="Credit Card"> 
+                            <span>Credit Card</span>
+                        </label>
+                        <label class="payment-label">
+                            <input type="radio" name="payment" value="Debit Card"> 
+                            <span>Debit Card</span>
+                        </label>
+                    </div>
+            
+                    <!-- UPI Details -->
+                    <div id="upi-details" class="payment-details">
+                        <label>Enter your UPI ID:</label>
+                        <input type="text" id="upi-id" placeholder="example@upi">
+                    </div>
+            
+                    <!-- Net Banking Details -->
+                    <div id="netbanking-details" class="payment-details">
+                        <label>Account Holder Name:</label>
+                        <input type="text" id="account-name" placeholder="Full Name">
+                        <label>Bank Name:</label>
+                        <input type="text" id="bank-name" placeholder="Bank Name">
+                    </div>
+            
+                    <!-- Credit/Debit Card Details -->
+                    <div id="card-details" class="payment-details">
+                        <label>Card Number:</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                        <label>Expiry Date:</label>
+                        <input type="month" id="expiry-date">
+                        <label>CVV:</label>
+                        <input type="password" id="cvv" placeholder="123" maxlength="3">
+                    </div>
+            
+                    <button type="submit" class="pay-button">Proceed to Pay</button>
+                </form>
+                <p id="payment-message"></p>
+            </div>            
+        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="section squircle">
+                    <img src="Images/mainimages/Offer.png" width="70" style="align-items: center;"><br><br>
+                    <h2 class="section-title">SPECIAL OFFERS</h2>
+                    <p class="section-text">Don't miss out on exclusive offers.</p>
+                    <a href="everyday-value.html" class="section-link">Special Offers <span>&#8594;</span></a>
+                </div>
+    
+                <div class="section squircle">
+                    <img src="Images/mainimages/bellll.png" width="90">
+                    <h2 class="section-title">FIND PAPAD BELL</h2>
+                    <p class="section-text">Find the nearest Papad Bell Restaurant in your city.</p>
+                    <a href="FindMeTry5.html" class="section-link">Find Us <span>&#8594;</span></a>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <div class="footer-logo" >
+                    <img src="Images/favicon.ico.png" alt="Papad Bell Logo">
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">Paise gaye 💸, swaad aaya 😋, pet bola – bhai maza aaya!</a></li>
+                </ul>
+                <p class="footer-copyright">&copy;2025 Papad Bell IP Holder, LLC. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script src="app.js"></script>
+    </body>
+    <script src="user-session-manager.js"></script>
+</html>

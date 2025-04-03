@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Rice Bowls
+        </title>
+        <link rel="stylesheet" href="styles/menu.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Oswald:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/Footer.css">
+        <script src="scripted.js"></script>
+        <link rel="stylesheet" href="styles/maincss.css">
+        <link rel="icon" type="x-icon" href="Images/pixelcut-export.png">
+        <link rel="stylesheet" href="styles/shopstyle.css">
+        <link rel="stylesheet" href="styles/maintext.css">
+    </head>
+    <body background="Images/Bgimage2.png">
+        <nav id="navbar">
+            <ul>
+                <li onclick="playMusic()">
+                    <a href="index.html">
+                        <img src="Images/pixelcut-export.png" width="135">
+                        <audio src="Images/taco-bell-bong-sfx.mp3" autoplay muted></audio>
+                    </a>
+                </li>
+                <li class="hide"><a href="index.html#head">ORDER NOW</a></li>
+                <li class="hide"><a href="FindMeTry5.html">FIND US</a></li>
+                <li class="hide"><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+                <li class="hide"><a href="aboutus.html">ABOUT US </a></li>
+                <li class="hide"><a href="login.html" id="loginButton">SIGN IN/UP</a></li>
+                <li class="hide">
+                    <header><div class="shopping">
+                    <img src="Images/shopping.svg">
+                    <span class="quantity">0</span>
+                    </div></header>
+                </li>
+                    
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ed26c2"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="side-bar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="60px" fill="#ed26c2"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html#head">ORDER NOW</a></li>
+                <li><a href="FindMeTry5.html">FIND US</a></li>
+                <li><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+                <li><a href="AboutUs.html">ABOUT US </a></li>
+                <li><a href="login.html" id="sideLoginButton">SIGN IN/UP</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <video autoplay loop muted  class="video-overlay">
+                <source src="Images/rice-bowl/Taco Bell Commercial 2021 - (USA) [Tb_mdKrF0Rs].mkv" type="video/mp4">
+            </video>
+            <p id="head" style=" top: 650px;">RICE BOWLS</p>
+            <div class="body2">
+                <section class="row">
+                    <button class="buttondesign" data-id="12" data-name="VALUE RICE BOWL MEAL" data-price="₹180" data-image="images/rice-bowl/1.jpg" data-type="non-veg">
+                        <div class="photo-container">
+                        <img class="photo" src="images\rice-bowl\1.jpg">
+                        </div>
+                        <p class="productname">VALUE RICE BOWL MEAL</p>
+                        <p class="nonveg">non-veg</p>
+                        <p class="price">₹180</p>
+                    </button>
+                    <button class="buttondesign" data-id="13" data-name="VALUE RICE BOWL MEAL" data-price="180" data-image="images/rice-bowl/2.jpg" data-type="non-veg">
+                        <div class="photo-container">
+                        <img class="photo" src="images\rice-bowl\2.jpg">
+                        </div>
+                        <p class="productname">VALUE RICE BOWL MEAL</p>
+                        <p class="nonveg">non-veg</p>
+                        <p class="price">₹180</p>
+                    </button>
+                    <button class="buttondesign" data-id="14" data-name="ULTIMATE RICE BOWL SUPREME MEAL" data-price="220" data-image="images/rice-bowl/3.jpg" data-type="non-veg">
+                        <div class="photo-container">
+                        <img class="photo" src="images\rice-bowl\3.jpg">
+                        </div>
+                        <p class="productname">ULTIMATE RICE BOWL SUPREME MEAL </p>
+                        <p class="nonveg">non-veg</p>
+                        <p class="price">₹220</p>
+                    </button>
+                    <button class="buttondesign" data-id="15" data-name="ULTIMATE RICE BOWL SUPREME MEAL" data-price="220" data-image="images/rice-bowl/4.jpg" data-type="veg">
+                        <div class="photo-container">
+                        <img class="photo" src="images\rice-bowl\4.jpg">
+                        </div>
+                        <p class="productname">ULTIMATE RICE BOWL SUPREME MEAL </p>
+                        <p class="veg">veg</p>
+                        <p class="price">₹220</p>
+                    </button>
+                </section>
+                <br><br>
+                <section class="row">
+                    <button class="buttondesign" data-id="16" data-name="ULTIMATE RICE BOWL SUPREME" data-price="180" data-image="images/rice-bowl/5.jpg" data-type="non-veg">
+                        <div class="photo-container">
+                        <img class="photo" src="images\rice-bowl\5.jpg">
+                        </div>
+                        <p class="productname">ULTIMATE RICE BOWL SUPREME</p>
+                        <p class="nonveg">non-veg</p>
+                        <p class="price">₹180</p>
+                    </button>
+                    <button class="buttondesign" data-id="17" data-name="ULTIMATE RICE BOWL SUPREME" data-price="120" data-image="images/rice-bowl/6.jpg" data-type="veg">
+                        <div class="photo-container">
+                        <img class="photo" src="images\rice-bowl\6.jpg">
+                        </div>
+                        <p class="productname">ULTIMATE RICE BOWL SUPREME</p>
+                        <p class="veg">veg</p>
+                        <p class="price">₹120</p>
+                    </button>
+                    <button class="buttondesign" data-id="18" data-name="VALUE RICE BOWL" data-price="150" data-image="images/rice-bowl/7.jpg" data-type="non-veg">
+                        <div class="photo-container">
+                        <img class="photo" src="images\rice-bowl\7.jpg">
+                        </div>
+                        <p class="productname">VALUE RICE BOWL</p>
+                        <p class="nonveg">non-veg</p>
+                        <p class="price">₹150</p>
+                    </button>
+                    <button class="buttondesign" data-id="19" data-name="VALUE RICE BOWL" data-price="120" data-image="images/rice-bowl/8.jpg" data-type="veg">
+                        <div class="photo-container">
+                        <img class="photo" src="images\rice-bowl\8.jpg">
+                        </div>
+                        <p class="productname">VALUE RICE BOWL</p>
+                        <p class="veg">veg</p>
+                        <p class="price">₹120</p>
+                    </button>
+                </section>
+            <br><br>
+        <section class="row">
+            <button class="buttondesign" data-id="20" data-name="ULTIMATE RICE BOWL REGULAR MEAL" data-price="180" data-image="images/rice-bowl/9.jpg" data-type="non-veg">
+                <div class="photo-container">
+                <img class="photo" src="images\rice-bowl\9.jpg">
+                </div>
+                <p class="productname">ULTIMATE RICE BOWL REGULAR MEAL</p>
+                <p class="nonveg">non-veg</p>
+                <p class="price">₹180</p>
+            </button>
+            <button class="buttondesign" data-id="21" data-name="ULTIMATE RICE BOWL REGULAR MEAL" data-price="180" data-image="images/rice-bowl/10.jpg" data-type="veg">
+                <div class="photo-container">
+                <img class="photo" src="images\rice-bowl\10.jpg">
+                </div>
+                <p class="productname">ULTIMATE RICE BOWL REGULAR MEAL</p>
+                <p class="veg">veg</p>
+                <p class="price">₹180</p>
+            </button>
+            <button class="buttondesign" data-id="22" data-name="ULTIMATE RICE BOWL REGULAR" data-price="150" data-image="images/rice-bowl/11.jpg" data-type="non-veg">
+                <div class="photo-container">
+                <img class="photo" src="images\rice-bowl\11.jpg">
+                </div>
+                <p class="productname">ULTIMATE RICE BOWL REGULAR</p>
+                <p class="nonveg">non-veg</p>
+                <p class="price">₹150</p>
+            </button>
+            <button class="buttondesign" data-id="23" data-name="ULTIMATE RICE BOWL REGULAR" data-price="150" data-image="images/rice-bowl/12.jpg" data-type="veg">
+                <div class="photo-container">
+                <img class="photo" src="images\rice-bowl\12.jpg">
+                </div>
+                <p class="productname">ULTIMATE RICE BOWL REGULAR</p>
+                <p class="veg">veg</p>
+                <p class="price">₹150</p>
+            </button>
+        </section>
+            </div>
+        </div>
+        <div class="card">
+            <h1>Your Cart</h1>
+            <ul class="listCard">
+            </ul>
+            <div class="checkOut">
+                <div class="total">₹0.00</div>
+                <div class="closeShopping">Close</div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="section squircle">
+                    <img src="Images/mainimages/Offer.png" width="70" style="align-items: center;"><br><br>
+                    <h2 class="section-title">SPECIAL OFFERS</h2>
+                    <p class="section-text">Don't miss out on exclusive offers.</p>
+                    <a href="everyday-value.html" class="section-link">Special Offers <span>&#8594;</span></a>
+                </div>
+    
+                <div class="section squircle">
+                    <img src="Images/mainimages/bellll.png" width="90">
+                    <h2 class="section-title">FIND PAPAD BELL</h2>
+                    <p class="section-text">Find the nearest Papad Bell Restaurant in your city.</p>
+                    <a href="FindMeTry5.html" class="section-link">Find Us <span>&#8594;</span></a>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <div class="footer-logo" >
+                    <img src="Images/favicon.ico.png" alt="Papad Bell Logo">
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">I dont care if RCB wins or not but rice bowls always wins my heart 😍</a></li>
+                </ul>
+                <p class="footer-copyright">&copy;2025 Papad Bell IP Holder, LLC. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <br><br>
+    </body>
+    <script src="user-session-manager.js"></script>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DESSERTFUL Delight!
+        </title>
+        <link rel="stylesheet" href="styles/menu.css">
+        <link rel="stylesheet" href="styles/maincss.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Oswald:wght@700&display=swap" rel="stylesheet">
+        <script src="scripted.js"></script>
+        <link rel="stylesheet" href="styles/Footer.css">
+        <link rel="icon" type="x-icon" href="Images/pixelcut-export.png">
+        <link rel="stylesheet" href="styles/shopstyle.css">
+        <link rel="stylesheet" href="styles/maintext.css">
+    </head>
+    <body background="Images/Bgimage2.png">
+        <nav id="navbar">
+            <ul>
+                <li onclick="playMusic()">
+                    <a href="index.html">
+                        <img src="Images/pixelcut-export.png" width="135">
+                        <audio src="Images/taco-bell-bong-sfx.mp3" autoplay muted></audio>
+                    </a>
+                </li>
+                <li class="hide"><a href="index.html#head">ORDER NOW</a></li>
+                <li class="hide"><a href="FindMeTry5.html">FIND US</a></li>
+                <li class="hide"><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+                <li class="hide"><a href="aboutus.html">ABOUT US </a></li>
+                <li class="hide"><a href="login.html" id="loginButton">SIGN IN/UP</a></li>
+                <li class="hide">
+                    <header><div class="shopping">
+                    <img src="Images/shopping.svg">
+                    <span class="quantity">0</span>
+                    </div></header>
+                </li>
+                    
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ed26c2"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="side-bar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="60px" fill="#ed26c2"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html#head">ORDER NOW</a></li>
+                <li><a href="FindMeTry5.html">FIND US</a></li>
+                <li><a href="Images/nutritional-info.pdf" target="_blank">NUTRITION</a></li>
+                <li><a href="AboutUs.html">ABOUT US </a></li>
+                <li><a href="login.html" id="sideLoginButton">SIGN IN/UP</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <video autoplay loop muted  class="video-overlay">
+                <source src="Images/desserts/Taco Bell Commercial 2021 - (USA) [OtTmdg-2hR8].mkv" type="video/mp4">
+            </video>
+            <p id="head" style=" top: 650px;">DESSERTS</p>
+            <div class="body2">
+                <section class="row">
+                    <button class="buttondesign" data-id="7" data-name="6 PIECES TACO BELL MOLTEN CHOCO PIES" data-price="120" data-image="images/desserts/1.png" data-type="veg">
+                        <div class="photo-container">
+                        <img class="photo" src="images\desserts\1.png">
+                        </div>
+                        <p class="productname">6 PIECES TACO BELL MOLTEN CHOCO PIES</p>
+                        <p class="veg">veg</p>
+                        <p class="price">₹120</p>
+                    </button>
+                    <button class="buttondesign" data-id="8" data-name="4 PIECES TACO BELL MOLTEN CHOCO PIES" data-price="80" data-image="images/desserts/2.png" data-type="veg">
+                        <div class="photo-container">
+                        <img class="photo" src="images\desserts\2.png">
+                        </div>
+                        <p class="productname">4 PIECES TACO BELL MOLTEN CHOCO PIES</p>
+                        <p class="veg">veg</p>
+                        <p class="price">₹80</p>
+                    </button>
+                    <button class="buttondesign" data-id="9" data-name="CHURRO BOMBS" data-price="80" data-image="images/desserts/3.jpg" data-type="veg">
+                        <div class="photo-container">
+                        <img class="photo" src="images\desserts\3.jpg">
+                        </div>
+                        <p class="productname">CHURRO BOMBS</p>
+                        <p class="veg">veg</p>
+                        <p class="price">₹80</p>
+                    </button>
+                    <button class="buttondesign" data-id="10" data-name="CHURROS & CHOCOLATE" data-price="120" data-image="images/desserts/4.jpg" data-type="veg">
+                        <div class="photo-container">
+                        <img class="photo" src="images\desserts\4.jpg">
+                        </div>
+                        <p class="productname">CHURROS & CHOCOLATE</p>
+                        <p class="veg">veg</p>
+                        <p class="price">₹120</p>
+                    </button>
+                </section>
+                <br><br>
+                <section class="row">
+                    <button class="buttondesign" data-id="11" data-name="CINNAMON TWIST" data-price="80" data-image="images/desserts/5.jpg" data-type="veg">
+                        <div class="photo-container">
+                        <img class="photo" src="images\desserts\5.jpg">
+                        </div>
+                        <p class="productname">CINNAMON TWIST</p>
+                        <p class="veg">veg</p>
+                        <p class="price">₹80</p>
+                    </button>
+                    <button class="empty">
+                    </button>
+                    <button class="empty">
+                    </button>
+                    <button class="empty">
+                    </button>
+                </section>
+            </div>
+        </div>
+        <div class="card">
+            <h1>Your Cart</h1>
+            <ul class="listCard">
+            </ul>
+            <div class="checkOut">
+                <div class="total">₹0.00</div>
+                <div class="closeShopping">Close</div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="section squircle">
+                    <img src="Images/mainimages/Offer.png" width="70" style="align-items: center;"><br><br>
+                    <h2 class="section-title">SPECIAL OFFERS</h2>
+                    <p class="section-text">Don't miss out on exclusive offers.</p>
+                    <a href="everyday-value.html" class="section-link">Special Offers <span>&#8594;</span></a>
+                </div>
+    
+                <div class="section squircle">
+                    <img src="Images/mainimages/bellll.png" width="90">
+                    <h2 class="section-title">FIND PAPAD BELL</h2>
+                    <p class="section-text">Find the nearest Papad Bell Restaurant in your city.</p>
+                    <a href="FindMeTry5.html" class="section-link">Find Us <span>&#8594;</span></a>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <div class="footer-logo" >
+                    <img src="Images/favicon.ico.png" alt="Papad Bell Logo">
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">Dessert nahi, ❤️ ka sukoon hai yeh!</a></li>
+                </ul>
+                <p class="footer-copyright">&copy;2025 Papad Bell IP Holder, LLC. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </body>
+    <script src="user-session-manager.js"></script>
+</html>
