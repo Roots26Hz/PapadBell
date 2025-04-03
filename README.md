@@ -45,11 +45,14 @@ Follow these steps to clone the repository, open it in VS Code, and run `index.h
 
    ```sh
    git clone https://github.com/Roots26Hz/PapadBell.git
-Navigate to the Project Folder
-cd PapadBell
+   ```
+   Navigate to the Project Folder
+   ```sh
+      cd PapadBell
+
 Open in Visual Studio Code
 code .
-Run index.html with Live Server
+Run index.html with Live Server.
 Make sure you have the Live Server extension installed in VS Code.
 Open index.html in VS Code.
 Right-click anywhere in the file.
