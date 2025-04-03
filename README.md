@@ -34,6 +34,27 @@ We love contributions! Follow these steps to collaborate:
 5️⃣ **Submit a pull request** 🚀  
 
 ---
+## 🚀 Getting Started  
+
+Follow these steps to clone the repository, open it in VS Code, and run `index.html` using the Live Server extension.  
+
+### 📌 Steps  
+
+1. **Clone the Repository**  
+   Open your terminal and run:  
+
+   ```sh
+   git clone https://github.com/Roots26Hz/PapadBell.git
+Navigate to the Project Folder
+cd PapadBell
+Open in Visual Studio Code
+code .
+Run index.html with Live Server
+Make sure you have the Live Server extension installed in VS Code.
+Open index.html in VS Code.
+Right-click anywhere in the file.
+Select "Open with Live Server".
+Your browser should now launch with the PapadBell website! 🎉
 
 ## 📌 **To-Do List**  
 
