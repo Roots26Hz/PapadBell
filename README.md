@@ -7,10 +7,9 @@ Welcome to **PapadBell**—your go-to destination for the most delightful culina
 ## 🚀 **Features**  
 
 ✨ **Sleek & Modern UI** – A visually appealing and user-friendly experience.  
-🍽 **Diverse Food Categories** – Browse a wide range of cuisines and dishes.  
-🔍 **Smart Search & Filters** – Find meals based on taste, price, and availability.  
+🍽 **Diverse Food Categories** – Browse a wide range of cuisines and dishes.    
 📍 **Store Locator** – Effortlessly discover the nearest PapadBell outlet.  
-📱 **Fully Responsive** – Smooth functionality across all devices.  
+📱 **Fully Responsive** – Smooth functionality.  
 🎨 **Elegant Animations** – A dynamic and immersive browsing experience.  
 
 ---
