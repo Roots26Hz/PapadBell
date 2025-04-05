@@ -49,13 +49,12 @@ Follow these steps to clone the repository, open it in VS Code, and run `index.h
    ```sh
       cd PapadBell
 
-Open in Visual Studio Code.
-Run index.html with Live Server.
-Make sure you have the Live Server extension installed in VS Code.
-Open index.html in VS Code.
-Right-click anywhere in the file.
-Select "Open with Live Server".
-Your browser should now launch with the PapadBell website! 🎉
+2. **Open in Visual Studio Code. Run index.html with Live Server.**
+   Make sure you have the Live Server extension installed in VS Code.
+   Open index.html in VS Code.
+   Right-click anywhere in the file.
+   Select "Open with Live Server".
+   Your browser should now launch with the PapadBell website! 🎉
 
 ## 📌 **To-Do List**  
 
