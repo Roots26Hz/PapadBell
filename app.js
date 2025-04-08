@@ -1,4 +1,4 @@
-//Sidebar Javascript 
+
 function playMusic(){
     var music = new Audio('Images/taco-bell-bong-sfx.mp3');
     music.play();
@@ -14,51 +14,48 @@ function hideSidebar(){
 }
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".video-slide");
-let currentSlide = 0; // Track current slide
-let slideInterval; // Variable to store interval function
+let currentSlide = 0; 
+let slideInterval; 
 
-// Function to change active video
+
 function sliderNav(manual) {
     slides.forEach((slide, i) => {
         slide.classList.remove("active");
-        slide.style.display = "none"; // Hide all videos
+        slide.style.display = "none"; 
     });
 
     btns.forEach((btn) => btn.classList.remove("active"));
 
     slides[manual].classList.add("active");
-    slides[manual].style.display = "block"; // Show selected video
+    slides[manual].style.display = "block"; 
     btns[manual].classList.add("active");
 
-    currentSlide = manual; // Update current slide index
+    currentSlide = manual; 
 }
 
-// Function to auto-slide every 5 seconds
 function autoSlide() {
-    currentSlide = (currentSlide + 1) % slides.length; // Loop back to first slide after the last one
+    currentSlide = (currentSlide + 1) % slides.length; 
     sliderNav(currentSlide);
 }
 
-// Start auto-slide on page load
 function startAutoSlide() {
-    slideInterval = setInterval(autoSlide, 15000); // Change slide every 5 seconds
+    slideInterval = setInterval(autoSlide, 15000); 
 }
 
-// Stop auto-slide when manually clicking buttons
 btns.forEach((btn, i) => {
     btn.addEventListener("click", () => {
         sliderNav(i);
-        clearInterval(slideInterval); // Stop auto-slide when user clicks
-        startAutoSlide(); // Restart auto-slide after manual change
+        clearInterval(slideInterval); 
+        startAutoSlide(); 
     });
 });
 
-// Initialize slider
+
 document.addEventListener("DOMContentLoaded", () => {
-    sliderNav(0); // Set first slide as active
-    startAutoSlide(); // Start auto-sliding
+    sliderNav(0); 
+    startAutoSlide(); 
 });
-// Updated app.js to prevent navigation buttons from being added to cart
+
 
 let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
@@ -68,21 +65,20 @@ let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 let productButtons = document.querySelectorAll('.buttondesign:not(.navigation-button)');
 
-// Cart array to store items
+
 let cart = [];
 
-// Initialize from localStorage if available
+
 if (localStorage.getItem('cart')) {
     try {
         cart = JSON.parse(localStorage.getItem('cart'));
-        // Sort cart based on the order items were added
+       
         if (!cart.some(item => 'orderIndex' in item)) {
-            // If items don't have order index yet, add it
             cart.forEach((item, index) => {
                 item.orderIndex = index;
             });
         }
-        // Sort by orderIndex to maintain consistent order
+        
         cart.sort((a, b) => a.orderIndex - b.orderIndex);
         updateCart();
     } catch (e) {
@@ -92,7 +88,7 @@ if (localStorage.getItem('cart')) {
     }
 }
 
-// Open and close shopping cart
+
 if (openShopping) {
     openShopping.addEventListener('click', () => {
         body.classList.add('active');
@@ -105,15 +101,15 @@ if (closeShopping) {
     });
 }
 
-// Add click event listeners to all product buttons (excluding navigation buttons)
+
 productButtons.forEach(button => {
     button.addEventListener('click', (event) => {
-        // Skip if this is a navigation button
+        
         if (button.classList.contains('navigation-button') || !button.querySelector('.productname')) {
             return;
         }
         
-        // Prevent default behavior to avoid navigation if it's a link
+        
         event.preventDefault();
         
         const productId = button.getAttribute('data-id') || generateProductId(button);
@@ -126,27 +122,27 @@ productButtons.forEach(button => {
     });
 });
 
-// Helper function to generate product ID if not explicitly set
+
 function generateProductId(button) {
-    // First try to get data-id attribute
+    
     const dataId = button.getAttribute('data-id');
     if (dataId) return dataId;
     
-    // If no data-id, use the product name
+   
     const name = button.querySelector('.productname')?.textContent || 'unknown-product';
     return name.toLowerCase().replace(/\s+/g, '-');
 }
 
-// Helper function to determine product type
+
 function getProductType(button) {
     if (button.querySelector('.veg')) return 'veg';
     if (button.querySelector('.nonveg')) return 'non-veg';
     return 'unknown';
 }
 
-// Helper function to set default price if not explicitly set
+
 function getDefaultPrice(productName) {
-    // Only set prices for known products
+   
     const priceMap = {
         'CRISPY POTATO TACO': 1.99,
         'CRISPY CHICKEN TACO': 2.49,
@@ -154,7 +150,6 @@ function getDefaultPrice(productName) {
         'CRISPY CHICKEN WRAP': 3.49,
         'MINI QUESADILLA - CHEESE': 1.79,
         'CHEESY CHICKEN QUESADILLA': 2.99,
-        // Add combo menu items
         '2 CRUNCHY TACOS + 2 PANEER MAKHNI CHALUPA + CHEESY FRIES': 9.99,
         '2 CRUNCHY TACOS + 2 BUTTER CHICKEN CHALUPA + CHEESY FRIES': 10.99,
         'BIG BELL BOX': 12.99,
@@ -163,13 +158,11 @@ function getDefaultPrice(productName) {
         '4 CHICKEN 7 LAYER BURRITO VEG + 2 SEASONED FRIES + 2 CHURRO BOMBS': 18.99
     };
     
-    return priceMap[productName] || null; // Return null if not found instead of default price
+    return priceMap[productName] || null; 
 }
 
-// Function to check if a button is a product or a navigation button
+
 function isProductButton(button) {
-    // Check if it has product-specific elements
-    // For beverages, we need to look for .beverage class instead of .photo
     return (
         button.querySelector('.productname') && 
         (button.querySelector('.photo') || button.querySelector('.beverage')) && 
@@ -177,26 +170,26 @@ function isProductButton(button) {
     );
 }
 
-// Function to add a product to cart
+
 function addToCart(id, name, price, image, type) {
-    // Skip adding if we don't have a valid price
+   
     if (!price) {
         console.log(`Skipping "${name}" as it doesn't have a valid price.`);
         return;
     }
     
-    // Check if product is already in the cart
+    
     const existingItemIndex = cart.findIndex(item => item.id === id);
     
     if (existingItemIndex !== -1) {
-        // Increment quantity if item already exists
+       
         cart[existingItemIndex].quantity += 1;
     } else {
-        // Get the highest order index
+       
         const maxOrderIndex = cart.length > 0 ? 
             Math.max(...cart.map(item => item.orderIndex || 0)) : -1;
         
-        // Add new item to cart with order index
+        
         cart.push({
             id: id,
             name: name,
@@ -204,11 +197,11 @@ function addToCart(id, name, price, image, type) {
             image: image,
             type: type,
             quantity: 1,
-            orderIndex: maxOrderIndex + 1  // Ensures new items are added at the end
+            orderIndex: maxOrderIndex + 1  
         });
     }
     
-    // Add a small animation/feedback when adding to cart
+   
     const shoppingIcon = document.querySelector('.shopping');
     if (shoppingIcon) {
         shoppingIcon.style.transform = 'scale(1.2)';
@@ -217,12 +210,12 @@ function addToCart(id, name, price, image, type) {
         }, 200);
     }
     
-    // Update cart UI and save to localStorage
+    
     updateCart();
     saveCart();
 }
 
-// Function to update cart UI
+
 function updateCart() {
     if (!listCard) return;
     
@@ -234,20 +227,20 @@ function updateCart() {
         listCard.innerHTML = '<li class="empty-cart-message">Come on, order something!</li>';
         total.textContent = "₹0.00";
         quantity.textContent = "0";
-        return;  // Stop function execution if the cart is empty
+        return;  
     }
     
-    // Sort cart by orderIndex before rendering
+    
     const sortedCart = [...cart].sort((a, b) => a.orderIndex - b.orderIndex);
     
     sortedCart.forEach((item, index) => {
         totalPrice += item.price * item.quantity;
         totalItems += item.quantity;
         
-        // Create list item for cart
+       
         const li = document.createElement('li');
         
-        // Item info (image, name, type)
+        
         const itemInfo = document.createElement('div');
         itemInfo.className = 'item-info';
         
@@ -267,18 +260,17 @@ function updateCart() {
         itemInfo.appendChild(nameSpan);
         itemInfo.appendChild(typeTag);
         
-        // Item controls (quantity buttons, price)
+       
         const itemControls = document.createElement('div');
         itemControls.className = 'item-controls';
         
-        // Quantity controls
+       
         const quantityDiv = document.createElement('div');
         quantityDiv.className = 'item-quantity';
         
         const minusBtn = document.createElement('button');
         minusBtn.textContent = '-';
         minusBtn.addEventListener('click', () => {
-            // Find the real index in the original cart array
             const realIndex = cart.findIndex(cartItem => cartItem.id === item.id);
             changeQuantity(realIndex, -1);
         });
@@ -289,7 +281,7 @@ function updateCart() {
         const plusBtn = document.createElement('button');
         plusBtn.textContent = '+';
         plusBtn.addEventListener('click', () => {
-            // Find the real index in the original cart array
+            
             const realIndex = cart.findIndex(cartItem => cartItem.id === item.id);
             changeQuantity(realIndex, 1);
         });
@@ -298,17 +290,17 @@ function updateCart() {
         quantityDiv.appendChild(quantitySpan);
         quantityDiv.appendChild(plusBtn);
         
-        // Price
+        
         const priceSpan = document.createElement('span');
         priceSpan.className = 'item-price';
         priceSpan.textContent = `₹${(item.price * item.quantity).toFixed(2)}`;
         
-        // Remove button
+       
         const removeBtn = document.createElement('button');
         removeBtn.className = 'remove-item';
         removeBtn.textContent = '×';
         removeBtn.addEventListener('click', () => {
-            // Find the real index in the original cart array
+           
             const realIndex = cart.findIndex(cartItem => cartItem.id === item.id);
             removeFromCart(realIndex);
         });
@@ -317,24 +309,24 @@ function updateCart() {
         itemControls.appendChild(priceSpan);
         itemControls.appendChild(removeBtn);
         
-        // Append all to list item
+        
         li.appendChild(itemInfo);
         li.appendChild(itemControls);
         
         listCard.appendChild(li);
     });
     
-    // Update total price and quantity
+    
     if (total) total.textContent = `₹${totalPrice.toFixed(2)}`;
     if (quantity) quantity.textContent = totalItems;
 }
 
-// Function to change item quantity
+
 function changeQuantity(index, change) {
     if (index >= 0 && index < cart.length) {
         cart[index].quantity += change;
         
-        // Remove item if quantity reaches 0
+        
         if (cart[index].quantity <= 0) {
             cart.splice(index, 1);
         }
@@ -344,7 +336,7 @@ function changeQuantity(index, change) {
     }
 }
 
-// Function to remove item from cart
+
 function removeFromCart(index) {
     if (index >= 0 && index < cart.length) {
         cart.splice(index, 1);
@@ -353,25 +345,25 @@ function removeFromCart(index) {
     }
 }
 
-// Save cart to localStorage
+
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Add a checkout function
+
 if (document.querySelector('.total')) {
     document.querySelector('.total').addEventListener('click', function() {
         if (cart.length > 0) {
-            // Check if user is logged in before proceeding to checkout
+          
             if (isUserLoggedIn()) {
                 alert('Proceeding to checkout with a total of ₹' + parseFloat(this.textContent.replace('₹', '')).toFixed(2));
                 window.location.href = "payment.html";
             } else {
-                // Not logged in - redirect to login page
+                
                 alert('Please log in to continue with checkout.');
-                // Save cart state to maintain it through the login process
+                
                 saveCart();
-                // Redirect to login page with a return URL parameter
+               
                 window.location.href = "login.html?returnTo=payment.html";
             }
         } else {
@@ -380,21 +372,20 @@ if (document.querySelector('.total')) {
     });
 }
 function isUserLoggedIn() {
-    // In a real application, this would use cookies, localStorage, or session management
-    // For this example, check if we have a user session in localStorage
+   
     return localStorage.getItem('userLoggedIn') === 'true';
 }
 
-// Initialize product data attributes for existing HTML
+
 function initializeProductData() {
     document.querySelectorAll('.buttondesign').forEach(button => {
-        // Skip navigation buttons
+       
         if (!isProductButton(button)) {
             button.classList.add('navigation-button');
             return;
         }
         
-        // Only set attributes if they don't already exist
+        
         if (!button.hasAttribute('data-id')) {
             const productName = button.querySelector('.productname').textContent;
             const productId = generateProductId(button);
@@ -414,21 +405,20 @@ function initializeProductData() {
 }
 
 function initializeBeverageButtons() {
-    // Get all buttons with product data
+   
     const beverageButtons = document.querySelectorAll('[data-id]');
     
     beverageButtons.forEach(button => {
-        // First, remove any existing click listeners
-        // need to clone the button to remove all existing listeners
+       
         const newButton = button.cloneNode(true);
         button.parentNode.replaceChild(newButton, button);
         
-        // Make sure the button has the buttondesign class
+        
         if (!newButton.classList.contains('buttondesign')) {
             newButton.classList.add('buttondesign');
         }
         
-        // Add a single click event listener
+       
         newButton.addEventListener('click', function(event) {
             event.preventDefault();
             
@@ -438,7 +428,7 @@ function initializeBeverageButtons() {
             const productImage = this.getAttribute('data-image');
             const productType = this.getAttribute('data-type');
             
-            // Debug log to verify we're only adding once
+            
             console.log(`Adding to cart: ${productName}`);
             
             addToCart(productId, productName, productPrice, productImage, productType);
@@ -446,7 +436,7 @@ function initializeBeverageButtons() {
     });
 }
 
-// Call this on page load
+
 document.addEventListener('DOMContentLoaded', function() {
     initializeProductData();
     initializeBeverageButtons();
@@ -458,7 +448,7 @@ upiInput.addEventListener("keydown", (event) => {
     event.stopImmediatePropagation();
 }, true);
 
-//Payment yaha se
+
 document.addEventListener("DOMContentLoaded", function () {
 
 
@@ -497,7 +487,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Payment page loaded - checking DOM elements');
 
-    // Debugging: Log all form elements
+   
     const paymentForm = document.getElementById("payment-form");
     const upiDetails = document.getElementById("upi-details");
     const netBankingDetails = document.getElementById("netbanking-details");
@@ -514,26 +504,26 @@ document.addEventListener('DOMContentLoaded', function() {
         paymentMessage
     });
 
-    // Extensive error checking
+    
     if (!paymentForm) {
         console.error('Payment form not found!');
         return;
     }
 
-    // Use event delegation for more robust event handling
+  
     paymentForm.addEventListener('click', function(event) {
         const target = event.target;
         
-        // Handle payment method selection
+        
         if (target.matches('input[name="payment"]')) {
             console.log('Payment method selected:', target.value);
             
-            // Hide all payment details
+           
             [upiDetails, netBankingDetails, cardDetails].forEach(details => {
                 if (details) details.style.display = 'none';
             });
 
-            // Show selected payment details
+            
             switch(target.value) {
                 case 'UPI':
                     if (upiDetails) upiDetails.style.display = 'flex';
@@ -549,19 +539,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Ensure inputs are interactive
+   
     const inputFields = document.querySelectorAll('input:not([type="radio"])');
     inputFields.forEach(input => {
-        // Add multiple event listeners for maximum compatibility
+       
         ['click', 'focus', 'touchstart'].forEach(eventType => {
             input.addEventListener(eventType, function(e) {
                 console.log(`${eventType} event on ${input.id}`);
-                this.focus(); // Explicitly call focus
+                this.focus(); 
                 e.stopPropagation();
             });
         });
 
-        // Input formatting for card number
+       
         if (input.id === 'card-number') {
             input.addEventListener('input', function(e) {
                 let value = this.value.replace(/\D/g, '');
@@ -571,7 +561,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Form submission handler
+   
     paymentForm.addEventListener('submit', function(event) {
         event.preventDefault();
         console.log('Form submission attempted');
@@ -587,7 +577,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let isValid = false;
 
         try {
-            // Validation logic (similar to previous implementation)
+            
             switch(paymentMethod) {
                 case 'UPI':
                     const upiId = document.getElementById("upi-id").value.trim();
@@ -628,7 +618,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initial setup
     if (upiDetails) upiDetails.style.display = 'none';
     if (netBankingDetails) netBankingDetails.style.display = 'none';
     if (cardDetails) cardDetails.style.display = 'none';
