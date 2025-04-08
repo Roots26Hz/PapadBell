@@ -1,4 +1,4 @@
-// data for  states, cities, and localities
+
 const locations = {
     "Tamil Nadu": {
         "Chennai": ["T Nagar", "Anna Nagar", "Adyar", "OMR"],
@@ -25,7 +25,6 @@ const locations = {
     }
 };
 
-// Stores data (hardcoded)
 const stores = [
     { state: "Tamil Nadu", city: "Chennai", locality: "Anna Nagar", name: "Papad Bell, VR Chennai", img: "Images/Restaurant_Images/A_modern_aesthetically_beautif.jpeg" },
     { state: "Tamil Nadu", city: "Chennai", locality: "Adyar", name: "Papad Bell, Adyar Plaza", img: "Images/Restaurant_Images/image_of_a_restaurant_from_ins (1).jpeg" },
@@ -67,7 +66,6 @@ const stores = [
     { state: "Karnataka", city: "Mangalore", locality: "Hampankatta", name: "Papad Bell, Hampankatta Junction", img: "Images/Restaurant_Images/slightly_purple_theme_restaura.jpeg" },
     { state: "Karnataka", city: "Mangalore", locality: "Bejai", name: "Papad Bell, Bejai Square", img: "Images/Restaurant_Images/image_of_a_restaurant_from_out.jpeg" }
 ];
-//states load karne ke liye
 function loadStates() {
     let stateSelect = document.getElementById("state");
     Object.keys(locations).forEach(state => {
@@ -78,7 +76,6 @@ function loadStates() {
     });
 }
 
-//state choose karne ke baad cities ko update karega
 function updateCities() {
     let state = document.getElementById("state").value;
     let citySelect = document.getElementById("city");
@@ -101,7 +98,7 @@ function updateCities() {
     }
 }
 
-//city choose karne ke baad localities ko update karega
+
 function updateLocalities() {
     let state = document.getElementById("state").value;
     let city = document.getElementById("city").value;
@@ -122,7 +119,6 @@ function updateLocalities() {
     }
 }
 
-// Stores dikhayega based on upar ke 3 functions
 function searchStores() {
     let state = document.getElementById("state").value;
     let city = document.getElementById("city").value;
