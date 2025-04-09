@@ -152,5 +152,79 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
+#address-form {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+#address-form label {
+    color: white;
+    font-size: 16px;
+    margin-top: 5px;
+}
+#address-form input {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ed26c3;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+#address-form button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #ed26c3, #ff69b4);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+#address-form button:hover {
+    background: linear-gradient(90deg, #ff69b4, #ed26c3);
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 50px;
+    }
+    .payment-section {
+        width: 90%;
+    }
+    .cart-table {
+        width: 100%;
+    }
+    .cart-table th, .cart-table td {
+        font-size: 14px;
+    }
+    #st {
+        font-size: 6vw;
+    }
+}
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        gap: 20px;
+    }
+    .payment-section {
+        width: 100%;
+    }
+    .cart-table th, .cart-table td {
+        font-size: 12px;
+    }
+    #st {
+        font-size: 5vw;
+    }
+}
 
 
