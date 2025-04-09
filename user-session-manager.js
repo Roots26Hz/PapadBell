@@ -1,7 +1,6 @@
 
 function checkLoginStatus() {
     const currentUser = sessionStorage.getItem('currentUser');
-    
     const mainLoginButton = document.getElementById('loginButton');
     const sideLoginButton = document.getElementById('sideLoginButton');
     
@@ -49,8 +48,13 @@ function checkAuthRequired() {
     }
 }
 
+function resetLogin() {
+    localStorage.setItem('userLoggedIn', 'false');
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
     checkLoginStatus();
     checkAuthRequired(); 
+    resetLogin();
 });
