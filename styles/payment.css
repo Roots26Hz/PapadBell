@@ -157,12 +157,12 @@ body {
     align-items: center;
     margin-top: 15px;
 }
-#address-form label {
+#css {
     color: white;
     font-size: 16px;
     margin-top: 5px;
 }
-#address-form input {
+.css2 {
     width: 80%;
     padding: 10px;
     margin: 5px 0;
@@ -173,7 +173,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     color: white;
 }
-#address-form button {
+#button {
     margin-top: 20px;
     padding: 12px 25px;
     background: linear-gradient(90deg, #ed26c3, #ff69b4);
