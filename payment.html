@@ -111,6 +111,8 @@
                         </form>
                     </table>
                 </center>
+                <div id="saved-address" style="margin-top: 20px; color: white;"></div>
+                <br><br>
                 <h2 id="st">Select Payment Method</h2>
                 
                 <form id="payment-form">
@@ -190,6 +192,30 @@
             </div>
         </footer>
         <script src="app.js"></script>
+        <script>
+            document.getElementById('address-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the page from refreshing
+            
+                const name = document.getElementById('name').value;
+                const address = document.getElementById('address').value;
+                const city = document.getElementById('city').value;
+                const state = document.getElementById('state').value;
+                const zip = document.getElementById('zip').value;
+            
+                const formattedAddress = `
+                    <h3>Saved Address:</h3>
+                    <p><strong>${name}</strong><br>
+                    ${address}<br>
+                    ${city}, ${state} - ${zip}</p>
+                `;
+            
+                document.getElementById('saved-address').innerHTML = formattedAddress;
+            
+                // Optionally, clear the form
+                document.getElementById('address-form').reset();
+            });
+            </script>
+            
     </body>
     <script src="user-session-manager.js"></script>
 </html>
