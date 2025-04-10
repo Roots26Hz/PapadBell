@@ -1,4 +1,24 @@
+document.getElementById('address-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the page from refreshing
 
+    const name = document.getElementById('name').value;
+    const address = document.getElementById('address').value;
+    const city = document.getElementById('city').value;
+    const state = document.getElementById('state').value;
+    const zip = document.getElementById('zip').value;
+
+    const formattedAddress = `
+        <h3>Saved Address:</h3>
+        <p><strong>${name}</strong><br>
+        ${address}<br>
+        ${city}, ${state} - ${zip}</p>
+    `;
+
+    document.getElementById('saved-address').innerHTML = formattedAddress;
+
+    // Optionally, clear the form
+    document.getElementById('address-form').reset();
+});
 function playMusic(){
     var music = new Audio('Images/taco-bell-bong-sfx.mp3');
     music.play();
