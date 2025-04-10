@@ -48,13 +48,7 @@ function checkAuthRequired() {
     }
 }
 
-function resetLogin() {
-    localStorage.setItem('userLoggedIn', 'false');
-}
-
-
 document.addEventListener('DOMContentLoaded', function() {
     checkLoginStatus();
     checkAuthRequired(); 
-    resetLogin();
 });
