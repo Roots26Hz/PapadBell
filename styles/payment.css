@@ -77,7 +77,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 90px;
+    gap: 85px;
 }
 
 .payment-label {
